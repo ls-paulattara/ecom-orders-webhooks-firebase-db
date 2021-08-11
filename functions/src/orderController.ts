@@ -22,7 +22,7 @@ type Request = {
 }
 
 const addOrder = async (req: Request, res: Response) => {
-  const {number, status, email, firstname, lastname, updatedAt} = req.body;
+  const {number, status, email, firstname, lastname, updatedAt} = (req.body as any).order;
   try {
     // const allOrders: Order[] = [];
     // const querySnapshot = await db.collection("orders").get();
